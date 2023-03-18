@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MaxiKleen</title>
+
     <!-- css stylesheet -->
     <link rel="stylesheet" href="./styles.css" />
-
     <!-- font awesome -->
     <link
       rel="stylesheet"
@@ -15,6 +15,13 @@
       integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
+    />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=DM+Sans:wght@400;700&family=Poppins:wght@200;400;700&display=swap"
+      rel="stylesheet"
     />
   </head>
 
@@ -31,94 +38,166 @@
         <!-- navbar -->
         <nav>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Our Services</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about-us">About</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
           </ul>
         </nav>
       </section>
 
       <!-- hero section -->
-      <div class="hero-section" id="home-section">
+      <div class="hero-section" id="home">
         <h1 class="hero-heading">
           We Provide The <span class="hero-subtext">MaxiKleen</span> You Need
         </h1>
       </div>
     </header>
+
     <hr />
 
     <!-- main section -->
     <main>
       <!-- home section -->
-
-      <section class="commitment-container">
+      <article class="home-section">
+        <h2>Our Commitments</h2>
         <div class="commitment-message">
-          <h2>Our Commitment</h2>
+          <h3>Our Green Commitment</h3>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
-            velit numquam eveniet, eius sed quae fuga aliquam nostrum eaque,
-            harum ea itaque, labore consequatur laboriosam magni quas distinctio
-            omnis sapiente!
+            A <span class="capitalize green">GREEN</span> friendly
+            <span class="capitalize green">KLEENING</span> service at no extra
+            cost
           </p>
         </div>
         <div><img src="https://picsum.photos/640/360" alt="" /></div>
         <div class="commitment-message">
-          <h2>Our Commitment</h2>
+          <h3>Our Honest Commitment</h3>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta
-            velit numquam eveniet, eius sed quae fuga aliquam nostrum eaque,
-            harum ea itaque, labore consequatur laboriosam magni quas distinctio
-            omnis sapiente!
+            We provide an
+            <span class="capitalize yellow">HONEST</span> &
+            <span class="capitalize yellow">RELIABLE</span>,
+            <span class="capitalize yellow">EFFICIENT</span> &
+            <span class="capitalize yellow">PRECISION</span> service
           </p>
         </div>
         <div>
           <img src="https://picsum.photos/640/360" alt="" />
         </div>
-      </section>
+      </article>
+
       <hr />
 
       <!-- about section -->
-      <section class="about-section">
+      <article class="about-us--section" id="about-us">
+        <h2>About MaxiKleen</h2>
         <div>
           <img src="https://placebeard.it/640x360" alt="" />
         </div>
         <div>
-          <h2>About Us</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.
             Consequuntur repellat expedita officiis esse ea consequatur, sint
             distinctio iste ut error cupiditate corrupti voluptatum accusamus
-            quas. Nihil minus non hic cumque!
+            quas. Nihil minus non hic cumque! Lorem ipsum dolor sit amet
+            consectetur, adipisicing elit. Consequuntur repellat expedita
+            officiis esse ea consequatur, sint distinctio iste ut error
+            cupiditate corrupti voluptatum accusamus quas. Nihil minus non hic
+            cumque!
           </p>
         </div>
-      </section>
+      </article>
+
       <hr />
 
-      <section class="cleaning-services--section">
+      <!-- services section -->
+      <article class="cleaning-services--section" id="services">
+        <h2>Our Services</h2>
         <div class="cleaning-service-cards-container">
           <div class="cleaning-service--card">
             <i class="fa-solid fa-couch"></i>
             <h3>One Off Kleen</h3>
           </div>
           <div class="cleaning-service--card">
-            <i class="fa-solid fa-broom"></i>
-            <h3>Office Kleen</h3>
-          </div>
-          <div class="cleaning-service--card">
             <i class="fa-solid fa-spray-can-sparkles"></i>
             <h3>Sparkle Kleen</h3>
-          </div>
-          <div class="cleaning-service--card">
-            <i class="fa-solid fa-building"></i>
-            <h3>ABC Kleen</h3>
           </div>
           <div class="cleaning-service--card">
             <i class="fa-solid fa-hand-sparkles"></i>
             <h3>Deep Kleen</h3>
           </div>
+          <div class="cleaning-service--card">
+            <i class="fa-solid fa-house-user"></i>
+            <h3>COT Kleen</h3>
+          </div>
+          <div class="cleaning-service--card">
+            <i class="fa-solid fa-house-laptop"></i>
+            <h3>Office Kleen</h3>
+          </div>
+          <div class="cleaning-service--card">
+            <i class="fa-solid fa-building"></i>
+            <h3>ABC Kleen</h3>
+          </div>
         </div>
-      </section>
+      </article>
+
+      <hr />
+
+      <!-- contact section -->
+      <article class="contact-us--section" id="contact-us">
+        <h2>Contact us</h2>
+        <form>
+          <div class="input-wrapper">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="&#xf044; Full Name"
+              class="font-awesome"
+            />
+          </div>
+
+          <div class="input-wrapper">
+            <label for="name">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="&#xf0e0; Email"
+              class="font-awesome"
+            />
+          </div>
+
+          <div class="input-wrapper">
+            <label for="name">Phone Number</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="[0-9]{9,11}"
+              required
+              placeholder="&#xf095; Contact Number"
+              class="font-awesome"
+            />
+          </div>
+
+          <div class="input-wrapper">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              placeholder="&#xf27a; Message"
+              class="font-awesome"
+            >
+            </textarea>
+          </div>
+
+          <button type="submit">Submit</button>
+        </form>
+      </article>
     </main>
   </body>
 </html>
