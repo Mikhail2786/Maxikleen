@@ -1,11 +1,154 @@
+/* UNIVERSAL RULE */
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+}
+
+/* VARIABLES */
+:root {
+  /* font */
+  --mff: "Poppins", sans-serif;
+  --lff: "Alex Brush", cursive;
+  --lsff: "DM Sans", sans-serif;
+  --fc: #3d3d3d;
+  /* colours */
+  --pcolor: #c5e1a5;
+  --scolor: #f3d250;
+}
+
+/* ===GENERAL=== */
+
+body {
+  background-color: whitesmoke;
+  color: var(--fc);
+
+  font-family: var(--mff);
+  font-size: 16px;
+}
+
+/* ===HEADER=== */
+.navbar {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--pcolor);
+}
+
+.navbar .logo {
+  padding: 0.75rem 1rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.navbar-links ul {
+  margin: 0;
+  padding-right: 1rem;
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+}
+
+.navbar-items a {
+  color: var(--fc);
+  text-decoration: none;
+}
+
+/* ===MAIN=== */
+
+section#hero {
+  background-image: url("https://placebeard.it/640x360");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section#hero h1 {
+  padding: 1rem;
+  font-size: 3rem;
+  color: aqua;
+}
+
+#nav-toggle--btn {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#nav-toggle--btn svg {
+  height: 1.5rem;
+  width: 1.5rem;
+  columns: var(--fc);
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+}
+
+#nav-toggle--btn .open-icon {
+  display: block;
+}
+
+#nav-toggle--btn .close-icon {
+  display: none;
+}
+
+#nav-toggle--btn.open .open-icon {
+  display: none;
+}
+
+#nav-toggle--btn.open .close-icon {
+  display: block;
+}
+
+/* --logo-- */
+
+/* .logo {
+  position: relative;
+  font-size: 30px;
+}
+
+.logo-text {
+  font-family: "Alex Brush", cursive;
+}
+
+.logo-subtext {
+  display: block;
+  position: absolute;
+  left: 35px;
+
+  font-family: "DM Sans", sans-serif;
+} */
+
+/* ===MEDIA QUERIES=== */
+@media screen and (max-width: 600px) {
+  #nav-toggle--btn {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-links.open {
+    display: block;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: var(--pcolor);
+  }
 }
