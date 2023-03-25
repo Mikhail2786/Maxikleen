@@ -1,3 +1,4 @@
+/* ==RESET== */
 *,
 *::after,
 *::before {
@@ -8,11 +9,142 @@
 
 img {
   display: block;
-  width: 100%;
-  height: auto;
+  /* width: 100%; */
 }
 
+/* ==END OF RESET== */
+
+/* ==GENERAL STYLES== */
 body {
   min-height: 100vh;
+  overflow-x: hidden;
+
   font-family: "Poppins", sans-serif;
+}
+
+/* ==END OF GENERAL STYLES== */
+
+/* ==HEADER== */
+
+nav,
+header,
+.menu-btn,
+.navbar-links ul {
+  display: flex;
+}
+
+header {
+  background: #212529;
+  color: whitesmoke;
+  border: 2px solid black;
+  padding: 40px 30px;
+}
+
+.logo-container {
+  position: relative;
+}
+
+.logo-container p {
+  font-size: 25px;
+}
+
+.logo-text {
+  font-family: "Alex Brush", cursive;
+  margin-bottom: 15px;
+}
+
+.logo-subtext {
+  position: absolute;
+  top: 14px;
+  left: 30px;
+
+  font-family: "DM Sans", sans-serif;
+  color: #c5e1a5;
+}
+
+nav {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-links {
+  height: 100%;
+}
+
+.navbar-links ul {
+  list-style-type: none;
+}
+
+.navbar-items a {
+  display: block;
+  text-decoration: none;
+  padding: 16px;
+}
+
+.navbar-items a,
+.navbar-items a:visited {
+  color: whitesmoke;
+}
+
+.menu-btn {
+  position: absolute;
+  top: 26px;
+  right: 18px;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  /* border: 2px solid whitesmoke; */
+}
+
+.navbar-menu--btn {
+  width: 40px;
+  height: 4px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar-menu--btn::before,
+.navbar-menu--btn::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  background-color: whitesmoke;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.navbar-menu--btn::before {
+  transform: translateY(-16px);
+}
+
+.navbar-menu--btn::after {
+  transform: translateY(16px);
+}
+
+@media (max-width: 992px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    width: 100%;
+  }
+
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .navbar-items {
+    text-align: center;
+  }
 }
