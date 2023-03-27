@@ -16,8 +16,10 @@ img {
 /* ==GENERAL AND UTILITY STYLES== */
 body {
   min-height: 100vh;
+  width: 100vw;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
+  color: #3d3d3d;
 }
 
 .flex,
@@ -30,7 +32,6 @@ body {
 /* ==HEADER== */
 
 header {
-  border: 2px solid black;
   padding: 30px 0;
 
   background: #212529;
@@ -101,12 +102,10 @@ nav {
 .navbar-items a:focus,
 .navbar-items a:hover,
 .navbar-items a:active {
-  border-top: 3px solid #f3d250;
-  border-bottom: 3px solid #f3d250;
-
   width: 50%;
   margin: 0 auto;
   border: 3px solid #f3d250;
+  /* i may use a border top and bottom only */
 
   border-radius: 5px;
   /* background-color: rgba(243, 210, 80, 0.5); */
@@ -120,7 +119,7 @@ nav {
 /* HEADER-NAV--MENU-BTN */
 .menu-btn {
   position: absolute;
-  top: 20 px;
+  top: 18px;
   right: 18px;
   justify-content: center;
   align-items: center;
@@ -185,42 +184,60 @@ nav {
 
 /* MAIN-HERO--SECTION */
 .hero-section {
+  position: relative;
+
   justify-content: center;
   width: 100%;
-  height: 400px;
+  min-height: 500px;
 
-  background-image: url("../images/bar.jpg");
-  background-color: #212529;
+  background-image: url("../images/spray-bottle.jpg");
+  background-color: rgb(33, 37, 41);
   background-size: cover;
   background-position: center;
 
   align-items: center;
 }
 
+/* MAIN-HERO--HEADING */
 .hero-section h1 {
   width: 70%;
   max-width: 900px;
-  padding: 30px 0;
+  padding: 10px 0;
 
-  background-color: rgba(243, 210, 80, 0.8);
   border-radius: 5px;
 
-  font-size: 35px;
-  text-align: center;
+  color: whitesmoke;
+  font-size: clamp(1.855rem, 5vw, 5rem);
   font-weight: 100;
+  text-align: center;
+  text-shadow: 2px 2px #212529;
 }
 
 .hero-subtext {
   display: block;
 
   margin: auto;
-  max-width: 250px;
+  /* max-width: 417px; */
+  width: min(41vw, 417px);
   padding: 5px;
 
   background-color: #c5e1a5;
   border-radius: 5px;
 
+  color: #212529;
   font-family: "DM Sans", sans-serif;
+  text-shadow: none;
+}
+
+.maxikleen-slogan {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0;
+  display: block;
+  font-size: clamp(0rem, 5vw, 1.5rem);
+  font-weight: lighter;
+  color: #212529;
+  text-shadow: 2px 2px whitesmoke;
 }
 
 /* ==MEDIA QUERIES== */
