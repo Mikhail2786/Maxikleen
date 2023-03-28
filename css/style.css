@@ -138,7 +138,7 @@ nav {
   height: 4px;
 
   border-radius: 5px;
-  background-color: whitesmoke;
+  background-color: #c5e1a5;
   box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
 
   transition: all 0.2s ease-in-out;
@@ -185,17 +185,41 @@ nav {
 /* MAIN-HERO--SECTION */
 .hero-section {
   position: relative;
-
   justify-content: center;
+  align-items: center;
+}
+
+.carousel {
   width: 100%;
   min-height: 500px;
 
-  background-image: url("../images/spray-bottle.jpg");
-  background-color: rgb(33, 37, 41);
+  background-image: url("../images/kitchen.jpg");
+  /* background-color: #45494d; */
   background-size: cover;
   background-position: center;
+}
 
-  align-items: center;
+/* MAIN-HERO--ANIMATION */
+.fade {
+  -webkit-animation: 1.5s fade;
+  animation: 1.5s fade;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.7;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* MAIN-HERO--HEADING */
@@ -208,6 +232,7 @@ nav {
 
   color: whitesmoke;
   font-size: clamp(1.855rem, 5vw, 5rem);
+  /* i might make this more bold for accessibility */
   font-weight: 100;
   text-align: center;
   text-shadow: 2px 2px #212529;
@@ -217,7 +242,6 @@ nav {
   display: block;
 
   margin: auto;
-  /* max-width: 417px; */
   width: min(41vw, 417px);
   padding: 5px;
 
@@ -236,8 +260,9 @@ nav {
   display: block;
   font-size: clamp(0rem, 5vw, 1.5rem);
   font-weight: lighter;
+  font-weight: bold;
   color: #212529;
-  text-shadow: 2px 2px whitesmoke;
+  text-shadow: -2px -2px whitesmoke;
 }
 
 /* ==MEDIA QUERIES== */
