@@ -13,13 +13,16 @@ img {
 }
 /* ==END OF RESET== */
 
+/* ----------------------------------------------- */
 /* ==GENERAL AND UTILITY STYLES== */
 body {
   min-height: 100vh;
   width: 100vw;
-  font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
   color: #3d3d3d;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  overflow-x: hidden;
 }
 
 .flex,
@@ -29,8 +32,8 @@ body {
 
 /* ==END OF GENERAL STYLES== */
 
+/* ----------------------------------------------- */
 /* ==HEADER== */
-
 header {
   padding: 30px 0;
 
@@ -102,13 +105,13 @@ nav {
 .navbar-items a:focus,
 .navbar-items a:hover,
 .navbar-items a:active {
-  width: 50%;
+  max-width: max-content;
   margin: 0 auto;
-  border: 3px solid #f3d250;
+  border-top: 5px solid #f3d250;
+  border-bottom: 5px solid #f3d250;
   /* i may use a border top and bottom only */
 
   border-radius: 5px;
-  /* background-color: rgba(243, 210, 80, 0.5); */
   color: #c5e1a5;
 
   font-family: "Alex Brush", cursive;
@@ -165,9 +168,7 @@ nav {
 /* MENU-BTN--ANIMATION */
 .menu-btn.open .navbar-menu--btn {
   background: transparent;
-
   box-shadow: none;
-
   transform: translateX(-50px);
 }
 
@@ -180,18 +181,43 @@ nav {
 }
 /* ==END OF HEADER== */
 
+/* ----------------------------------------------- */
 /* ==MAIN STYLES== */
+article {
+  flex-direction: column;
+  width: 90%;
+  margin-inline: auto;
+  margin-bottom: 30px;
+}
+
+article h2 {
+  margin: 0 auto;
+  padding: 10px 0;
+
+  border-top: 11px solid #c5e1a5;
+  border-bottom: 10px solid #c5e1a5;
+
+  font-size: 25px;
+  font-weight: 100;
+  letter-spacing: 0.7px;
+  text-align: center;
+}
+
+.margin-top {
+  margin-top: 40px;
+}
 
 /* MAIN-HERO--SECTION */
 .hero-section {
   position: relative;
   justify-content: center;
+  margin-bottom: 40px;
   align-items: center;
 }
 
 .carousel {
   width: 100%;
-  min-height: 500px;
+  min-height: 450px;
 
   background-image: url("../images/kitchen.jpg");
   /* background-color: #45494d; */
@@ -263,6 +289,36 @@ nav {
   font-weight: bold;
   color: #212529;
   text-shadow: -2px -2px whitesmoke;
+}
+
+/* MAIN-COMMITMENT--SECTION */
+
+.home-section .commitment-message {
+  padding: 80px 33px;
+  margin-bottom: 15px;
+  text-align: left;
+  box-shadow: -10px 10px 10px grey;
+}
+
+.green-commitment {
+  background-color: #f3d250;
+}
+
+.honest-commitment {
+  background-color: #c5e1a5;
+  margin-top: 5px;
+}
+
+.commitment-message h3 {
+  font-weight: normal;
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 0.336px;
+}
+
+.commitment-message p,
+.commitment-message a {
+  font-size: 13px;
 }
 
 /* ==MEDIA QUERIES== */
