@@ -10,6 +10,7 @@
 img {
   display: block;
   width: 100%;
+  height: auto;
 }
 /* ==END OF RESET== */
 
@@ -28,6 +29,28 @@ body {
 .flex,
 .flex ul {
   display: flex;
+}
+
+.radius {
+  border-radius: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: block;
+  padding: 10px 15px;
+  width: 100%;
+  text-align: center;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  background-color: #f7e69a;
+  font-weight: bold;
 }
 
 /* ==END OF GENERAL STYLES== */
@@ -93,8 +116,6 @@ nav {
 .navbar-items a {
   display: block;
   padding: 16px;
-
-  text-decoration: none;
 }
 
 .navbar-items a,
@@ -111,7 +132,6 @@ nav {
   border-bottom: 5px solid #f3d250;
   /* i may use a border top and bottom only */
 
-  border-radius: 5px;
   color: #c5e1a5;
 
   font-family: "Alex Brush", cursive;
@@ -140,7 +160,6 @@ nav {
   width: 40px;
   height: 4px;
 
-  border-radius: 5px;
   background-color: #c5e1a5;
   box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
 
@@ -186,6 +205,7 @@ nav {
 article {
   flex-direction: column;
   width: 90%;
+  max-width: 800px;
   margin-inline: auto;
   margin-bottom: 30px;
 }
@@ -254,8 +274,6 @@ article h2 {
   max-width: 900px;
   padding: 10px 0;
 
-  border-radius: 5px;
-
   color: whitesmoke;
   font-size: clamp(1.855rem, 5vw, 5rem);
   /* i might make this more bold for accessibility */
@@ -293,32 +311,57 @@ article h2 {
 
 /* MAIN-COMMITMENT--SECTION */
 
-.home-section .commitment-message {
-  padding: 80px 33px;
+.commitment-message {
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 30px 20px;
   margin-bottom: 15px;
+  height: auto;
+  min-height: 286.8px;
   text-align: left;
   box-shadow: -10px 10px 10px grey;
 }
 
-.green-commitment {
+.secondary-colour {
   background-color: #f3d250;
 }
 
-.honest-commitment {
+.prime-colour {
   background-color: #c5e1a5;
   margin-top: 5px;
 }
 
 .commitment-message h3 {
+  margin-bottom: 30px;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 25px;
   text-align: center;
   letter-spacing: 0.336px;
 }
 
 .commitment-message p,
 .commitment-message a {
-  font-size: 13px;
+  font-size: 14px;
+}
+
+.commitment-message span {
+  display: inline-block;
+  padding: 2px 5px;
+  text-transform: uppercase;
+}
+
+.commitment-message a {
+  margin: 20px auto 0;
+}
+
+.commitment-message a:visited {
+  color: #3d3d3d;
+}
+
+.green-btn:hover,
+.green-btn:focus,
+.green-btn:active {
+  background-color: #d6e9bb;
 }
 
 /* ==MEDIA QUERIES== */
